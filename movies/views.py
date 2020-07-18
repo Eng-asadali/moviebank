@@ -10,6 +10,7 @@ def movieListView(request):
 class netflixListView(ListView):
     model = Movies
     template_name = "movies/index.html"
+
 class netflixDetailView(DetailView):
     model= Movies
     template_name = "movies/indexDetailView.html"
