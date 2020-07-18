@@ -1,0 +1,12 @@
+{%extends 'movies/base.html'%}
+
+{% block content %}
+ <ul>
+    {% for obj in object_list %}
+     <a href="{% url 'netflixDetailView' obj.id%}">
+        <li>{{obj.name}}</li>
+        <li><img src="{{ obj.imgPath.url }}"></li>
+         </a>
+    {%endfor%}
+ </ul>
+{% endblock %}
